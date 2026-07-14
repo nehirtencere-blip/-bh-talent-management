@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Serhat Demircioğlu | BH Talent Management</title>
+<link href="../css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="navbar">
+<nav class="main-nav">
+<a data-en="Home" data-tr="Ana Sayfa" href="../index.html">Ana Sayfa</a>
+<a data-en="Our Actors" data-tr="Oyuncularımız" href="../talent.html">Oyuncularımız</a>
+<a data-en="About" data-tr="Hakkımızda" href="../about.html">Hakkımızda</a>
+<a data-en="Contact" data-tr="İletişim" href="../contact.html">İletişim</a>
+</nav>
+<a class="logo-link" href="../index.html">
+<img alt="BH Talent Management Logo" class="logo" src="../images/logo.png"/>
+</a>
+<div class="language"><button data-lang="tr" onclick="setLanguage('tr')" type="button">TR</button><button data-lang="en" onclick="setLanguage('en')" type="button">EN</button></div>
+</header>
+<main class="lux-profile">
+<section class="editorial-cover actor-cover actor-cover-serhat-demircioglu" style="--cover-image: url('../images/actors/serhat-demircioglu-gallery/1.jpeg');">
+<img alt="Serhat Demircioğlu" src="../images/actors/serhat-demircioglu-gallery/1.jpeg"/>
+<div class="editorial-cover-text">
+<a class="back-link" data-en="Our Actors" data-tr="Oyuncularımız" href="../talent.html">Oyuncularımız</a>
+<p class="lux-kicker" data-en="BH Talent Management" data-tr="BH Talent Management">BH Talent Management</p>
+<h1>SERHAT DEMIRCIOĞLU</h1>
+<p data-en="Actor" data-tr="Oyuncu">Oyuncu</p>
+</div>
+</section>
+<section class="lux-content editorial-cv">
+<div class="lux-block">
+<h2 data-en="Year of Birth" data-tr="Doğum Tarihi">Doğum Tarihi</h2>
+<div>
+<p>2004</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Training" data-tr="Eğitim">Eğitim</h2>
+<div>
+<p>MEB: Diksiyon</p>
+<p>Kamera Oyunculuğu: Deneme Çekimine Hazırlanma</p>
+<p>Kamera Oyunculuğu: Senaryo Analizi</p>
+<p>Kamera Oyunculuğu: Stanislavski Etkisi</p>
+<p>Kamera Oyunculuğu: Michael Chekhov Tekniği</p>
+<p>Kamera Oyunculuğu: Meisner Tekniği</p>
+<p>Kamera Oyunculuğu: Oyunculukta Sistem ve Metot</p>
+<p>Konservatuvara Hazırlık Tiyatro</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Television" data-tr="Televizyon">Televizyon</h2>
+<div>
+<p>Yalnız Kurt</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Skills" data-tr="Yetenekler">Yetenekler</h2>
+<div class="lux-skills">
+<span>Seslendirme</span>
+<span>Dublaj</span>
+<span>Bisiklet</span>
+<span>Muay Thai</span>
+<span>Yüzme</span>
+<span>Futbol</span>
+<span>Fitness</span>
+<span>Masa tenisi</span>
+<span>Basketbol</span>
+<span>Voleybol</span>
+<span>İngilizce B1 Pre-Intermediate</span>
+<span>Karadeniz ağzı</span>
+<span>Amerikan aksanı</span>
+<span>Doğu ağzı</span>
+</div>
+</div>
+</section>
+<section class="gallery-section">
+<div class="gallery-heading">
+<div>
+<p class="lux-kicker" data-en="PORTFOLIO" data-tr="PORTFOLYO">PORTFOLYO</p>
+<h2 data-en="Photo Gallery" data-tr="Fotoğraf Galerisi">Fotoğraf Galerisi</h2>
+</div>
+</div>
+<div class="slideshow">
+<button aria-label="Previous image" class="slide-btn prev">‹</button>
+<div class="slide-frame">
+<img alt="Serhat Demircioğlu gallery" id="mainSlide" src="../images/actors/serhat-demircioglu-gallery/1.jpeg"/>
+</div>
+<button aria-label="Next image" class="slide-btn next">›</button>
+</div>
+<div class="slide-dots" id="slideDots"></div>
+<div class="thumbs" id="thumbs">
+  <img alt="Serhat Demircioğlu thumbnail 1" class="active" src="../images/actors/serhat-demircioglu-gallery/1.jpeg"/>
+  <img alt="Serhat Demircioğlu thumbnail 2" src="../images/actors/serhat-demircioglu-gallery/2.jpeg"/>
+  <img alt="Serhat Demircioğlu thumbnail 3" src="../images/actors/serhat-demircioglu-gallery/3.jpeg"/>
+  <img alt="Serhat Demircioğlu thumbnail 4" src="../images/actors/serhat-demircioglu-gallery/4.jpeg"/>
+  <img alt="Serhat Demircioğlu thumbnail 5" src="../images/actors/serhat-demircioglu-gallery/5.jpeg"/>
+  <img alt="Serhat Demircioğlu thumbnail 6" src="../images/actors/serhat-demircioglu-gallery/6.jpeg"/>
+  <img alt="Serhat Demircioğlu thumbnail 7" src="../images/actors/serhat-demircioglu-gallery/7.jpeg"/>
+</div>
+</section>
+</main>
+<div class="lightbox" id="lightbox">
+<button aria-label="Close image" class="lightbox-close">×</button>
+<img alt="Serhat Demircioğlu enlarged gallery image" id="lightboxImg" src=""/>
+</div>
+<script>
+  const images = [
+  "../images/actors/serhat-demircioglu-gallery/1.jpeg",
+  "../images/actors/serhat-demircioglu-gallery/2.jpeg",
+  "../images/actors/serhat-demircioglu-gallery/3.jpeg",
+  "../images/actors/serhat-demircioglu-gallery/4.jpeg",
+  "../images/actors/serhat-demircioglu-gallery/5.jpeg",
+  "../images/actors/serhat-demircioglu-gallery/6.jpeg",
+  "../images/actors/serhat-demircioglu-gallery/7.jpeg"
+];
+
+  let currentIndex = 0;
+  let autoplay;
+  const mainSlide = document.getElementById("mainSlide");
+  const thumbs = document.querySelectorAll("#thumbs img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const dotsContainer = document.getElementById("slideDots");
+
+  images.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.setAttribute("aria-label", "Go to image " + (index + 1));
+    dot.addEventListener("click", () => showSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll("#slideDots button");
+
+  function showSlide(index) {
+    currentIndex = (index + images.length) % images.length;
+    mainSlide.style.opacity = "0";
+    setTimeout(() => {
+      mainSlide.src = images[currentIndex];
+      mainSlide.style.opacity = "1";
+    }, 180);
+
+    thumbs.forEach((thumb, i) => thumb.classList.toggle("active", i === currentIndex));
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === currentIndex));
+  }
+
+  function nextSlide() { showSlide(currentIndex + 1); }
+  function startAutoplay() {
+    clearInterval(autoplay);
+    autoplay = setInterval(nextSlide, 4000);
+  }
+
+  document.querySelector(".next").addEventListener("click", () => { nextSlide(); startAutoplay(); });
+  document.querySelector(".prev").addEventListener("click", () => { showSlide(currentIndex - 1); startAutoplay(); });
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => { showSlide(index); startAutoplay(); });
+  });
+  mainSlide.addEventListener("click", () => {
+    lightboxImg.src = images[currentIndex];
+    lightbox.classList.add("open");
+  });
+  document.querySelector(".lightbox-close").addEventListener("click", () => lightbox.classList.remove("open"));
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.classList.remove("open");
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") { nextSlide(); startAutoplay(); }
+    if (event.key === "ArrowLeft") { showSlide(currentIndex - 1); startAutoplay(); }
+    if (event.key === "Escape") lightbox.classList.remove("open");
+  });
+
+  showSlide(0);
+  startAutoplay();
+</script>
+<script src="../js/script.js"></script></body>
+</html>

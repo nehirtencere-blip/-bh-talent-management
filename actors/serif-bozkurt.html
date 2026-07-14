@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Şerif Bozkurt | BH Talent Management</title>
+<link href="../css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="navbar">
+<nav class="main-nav">
+<a data-en="Home" data-tr="Ana Sayfa" href="../index.html">Ana Sayfa</a>
+<a data-en="Our Actors" data-tr="Oyuncularımız" href="../talent.html">Oyuncularımız</a>
+<a data-en="About" data-tr="Hakkımızda" href="../about.html">Hakkımızda</a>
+<a data-en="Contact" data-tr="İletişim" href="../contact.html">İletişim</a>
+</nav>
+<a class="logo-link" href="../index.html">
+<img alt="BH Talent Management Logo" class="logo" src="../images/logo.png"/>
+</a>
+<div class="language"><button data-lang="tr" onclick="setLanguage('tr')" type="button">TR</button><button data-lang="en" onclick="setLanguage('en')" type="button">EN</button></div>
+</header>
+<main class="lux-profile">
+<section class="editorial-cover actor-cover actor-cover-serif-bozkurt" style="--cover-image: url('../images/actors/serif-bozkurt-gallery/1.jpeg');">
+<img alt="Şerif Bozkurt" src="../images/actors/serif-bozkurt-gallery/1.jpeg"/>
+<div class="editorial-cover-text">
+<a class="back-link" data-en="Our Actors" data-tr="Oyuncularımız" href="../talent.html">Oyuncularımız</a>
+<p class="lux-kicker" data-en="BH Talent Management" data-tr="BH Talent Management">BH Talent Management</p>
+<h1>ŞERIF BOZKURT</h1>
+<p data-en="Actor" data-tr="Oyuncu">Oyuncu</p>
+</div>
+</section>
+<section class="lux-content editorial-cv">
+<div class="lux-block">
+<h2 data-en="Year of Birth" data-tr="Doğum Tarihi">Doğum Tarihi</h2>
+<div>
+<p>1979</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Training" data-tr="Eğitim">Eğitim</h2>
+<div>
+<p>Hacettepe Üniversitesi Devlet Konservatuvarı Oyunculuk</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Television" data-tr="Televizyon">Televizyon</h2>
+<div>
+<p>Bizi Birleştiren Hayat</p>
+<p>Kimse Bilmez</p>
+<p>Payitaht</p>
+<p>Diriliş Ertuğrul</p>
+<p>Kış Güneşi</p>
+<p>Kayıp Şehir</p>
+<p>Babam İçin</p>
+<p>Küçük Kadınlar</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Film" data-tr="Sinema">Sinema</h2>
+<div>
+<p>Açlığa Doymak</p>
+<p>Issız Adam</p>
+<p>Son Ders</p>
+<p>Aşk Olsun</p>
+<p>Dalgalar ve İzler</p>
+<p>Soğuk Cüzdan</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Skills" data-tr="Yetenekler">Yetenekler</h2>
+<div class="lux-skills">
+<span>İngilizce — Orta</span>
+<span>Futbol (lisans)</span>
+<span>Hentbol (lisans)</span>
+<span>Kılıç</span>
+<span>Eskrim (iyi derece)</span>
+<span>Vals</span>
+<span>Salsa</span>
+<span>Latin dans / Cha Cha (eğitmen)</span>
+<span>Wing Chun (savaş sanatları)</span>
+</div>
+</div>
+</section>
+<section class="gallery-section">
+<div class="gallery-heading">
+<div>
+<p class="lux-kicker" data-en="PORTFOLIO" data-tr="PORTFOLYO">PORTFOLYO</p>
+<h2 data-en="Photo Gallery" data-tr="Fotoğraf Galerisi">Fotoğraf Galerisi</h2>
+</div>
+</div>
+<div class="slideshow">
+<button aria-label="Previous image" class="slide-btn prev">‹</button>
+<div class="slide-frame">
+<img alt="Şerif Bozkurt gallery" id="mainSlide" src="../images/actors/serif-bozkurt-gallery/1.jpeg"/>
+</div>
+<button aria-label="Next image" class="slide-btn next">›</button>
+</div>
+<div class="slide-dots" id="slideDots"></div>
+<div class="thumbs" id="thumbs">
+<img alt="Şerif Bozkurt thumbnail 1" class="active" src="../images/actors/serif-bozkurt-gallery/1.jpeg"/>
+<img alt="Şerif Bozkurt thumbnail 2" class="" src="../images/actors/serif-bozkurt-gallery/2.jpeg"/>
+<img alt="Şerif Bozkurt thumbnail 3" class="" src="../images/actors/serif-bozkurt-gallery/3.jpeg"/>
+</div>
+</section>
+</main>
+<div class="lightbox" id="lightbox">
+<button aria-label="Close image" class="lightbox-close">×</button>
+<img alt="Şerif Bozkurt enlarged gallery image" id="lightboxImg" src=""/>
+</div>
+<script>
+  const images = [
+    "../images/actors/serif-bozkurt-gallery/1.jpeg",
+    "../images/actors/serif-bozkurt-gallery/2.jpeg",
+    "../images/actors/serif-bozkurt-gallery/3.jpeg"
+  ];
+
+  let currentIndex = 0;
+  let autoplay;
+  const mainSlide = document.getElementById("mainSlide");
+  const thumbs = document.querySelectorAll("#thumbs img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const dotsContainer = document.getElementById("slideDots");
+
+  images.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.setAttribute("aria-label", "Go to image " + (index + 1));
+    dot.addEventListener("click", () => showSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll("#slideDots button");
+
+  function showSlide(index) {
+    currentIndex = (index + images.length) % images.length;
+    mainSlide.style.opacity = "0";
+    setTimeout(() => {
+      mainSlide.src = images[currentIndex];
+      mainSlide.style.opacity = "1";
+    }, 180);
+
+    thumbs.forEach((thumb, i) => thumb.classList.toggle("active", i === currentIndex));
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === currentIndex));
+  }
+
+  function nextSlide() { showSlide(currentIndex + 1); }
+  function startAutoplay() {
+    clearInterval(autoplay);
+    autoplay = setInterval(nextSlide, 4000);
+  }
+
+  document.querySelector(".next").addEventListener("click", () => { nextSlide(); startAutoplay(); });
+  document.querySelector(".prev").addEventListener("click", () => { showSlide(currentIndex - 1); startAutoplay(); });
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => { showSlide(index); startAutoplay(); });
+  });
+  mainSlide.addEventListener("click", () => {
+    lightboxImg.src = images[currentIndex];
+    lightbox.classList.add("open");
+  });
+  document.querySelector(".lightbox-close").addEventListener("click", () => lightbox.classList.remove("open"));
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.classList.remove("open");
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") { nextSlide(); startAutoplay(); }
+    if (event.key === "ArrowLeft") { showSlide(currentIndex - 1); startAutoplay(); }
+    if (event.key === "Escape") lightbox.classList.remove("open");
+  });
+
+  showSlide(0);
+  startAutoplay();
+</script>
+<script src="../js/script.js"></script></body>
+</html>

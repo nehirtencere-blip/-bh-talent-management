@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Özge Üstek | BH Talent Management</title>
+<link href="../css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="navbar">
+<nav class="main-nav">
+<a data-en="Home" data-tr="Ana Sayfa" href="../index.html">Ana Sayfa</a>
+<a data-en="Our Actors" data-tr="Oyuncularımız" href="../talent.html">Oyuncularımız</a>
+<a data-en="About" data-tr="Hakkımızda" href="../about.html">Hakkımızda</a>
+<a data-en="Contact" data-tr="İletişim" href="../contact.html">İletişim</a>
+</nav>
+<a class="logo-link" href="../index.html">
+<img alt="BH Talent Management Logo" class="logo" src="../images/logo.png"/>
+</a>
+<div class="language"><button data-lang="tr" onclick="setLanguage('tr')" type="button">TR</button><button data-lang="en" onclick="setLanguage('en')" type="button">EN</button></div>
+</header>
+<main class="lux-profile">
+<section class="editorial-cover actor-cover actor-cover-ozge-ustek" style="--cover-image: url('../images/actors/ozge-ustek-gallery/1.jpeg');">
+<img alt="Özge Üstek" src="../images/actors/ozge-ustek-gallery/1.jpeg"/>
+<div class="editorial-cover-text">
+<a class="back-link" data-en="Our Actors" data-tr="Oyuncularımız" href="../talent.html">Oyuncularımız</a>
+<p class="lux-kicker" data-en="BH Talent Management" data-tr="BH Talent Management">BH Talent Management</p>
+<h1>ÖZGE ÜSTEK</h1>
+<p data-en="Actor" data-tr="Oyuncu">Oyuncu</p>
+</div>
+</section>
+<section class="lux-content editorial-cv">
+<div class="lux-block">
+<h2 data-en="Year of Birth" data-tr="Doğum Tarihi">Doğum Tarihi</h2>
+<div>
+<p>1987</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Training" data-tr="Eğitim">Eğitim</h2>
+<div>
+<p>Uludağ Üniversitesi Güzel Sanatlar Fakültesi — Tiyatro Bölümü (2024)</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Theatre" data-tr="Tiyatro">Tiyatro</h2>
+<div>
+<p>Leenane’in Güzellik Kraliçesi — Oyuncu &amp; Yönetmen (2024)</p>
+<p>Sığınaktakiler (2023)</p>
+<p>Bursa’da Bir Cumhuriyet Kumpanyası (2023)</p>
+<p>Roberto Zucco (2023)</p>
+<p>Martı (2022)</p>
+<p>Düğün ya da Davul — Halkın Ekmeği Sokak Tiyatrosu (2021/2017)</p>
+<p>Kafesin Biri Kuş Aramaya Çıkmış (2018–2021)</p>
+<p>Çok Acayip Kabare (2018)</p>
+<p>Atom Karınca (2018)</p>
+<p>Azizname (2018)</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Commercials" data-tr="Reklam">Reklam</h2>
+<div>
+<p>Meditown (2024)</p>
+<p>Koçtaş (2023)</p>
+<p>Vivident (2023)</p>
+<p>Campusera (2019)</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Skills" data-tr="Yetenekler">Yetenekler</h2>
+<div class="lux-skills">
+<span>Türkçe</span>
+<span data-en="Theatre" data-tr="Tiyatro">Tiyatro</span>
+<span>Kamera önü oyunculuk</span>
+</div>
+</div>
+</section>
+<section class="gallery-section">
+<div class="gallery-heading">
+<div>
+<p class="lux-kicker" data-en="PORTFOLIO" data-tr="PORTFOLYO">PORTFOLYO</p>
+<h2 data-en="Photo Gallery" data-tr="Fotoğraf Galerisi">Fotoğraf Galerisi</h2>
+</div>
+</div>
+<div class="slideshow">
+<button aria-label="Previous image" class="slide-btn prev">‹</button>
+<div class="slide-frame">
+<img alt="Özge Üstek gallery" id="mainSlide" src="../images/actors/ozge-ustek-gallery/1.jpeg"/>
+</div>
+<button aria-label="Next image" class="slide-btn next">›</button>
+</div>
+<div class="slide-dots" id="slideDots"></div>
+<div class="thumbs" id="thumbs">
+<img alt="Özge Üstek thumbnail 1" class="active" src="../images/actors/ozge-ustek-gallery/1.jpeg"/>
+<img alt="Özge Üstek thumbnail 2" class="" src="../images/actors/ozge-ustek-gallery/2.jpeg"/>
+<img alt="Özge Üstek thumbnail 3" class="" src="../images/actors/ozge-ustek-gallery/3.jpeg"/>
+<img alt="Özge Üstek thumbnail 4" class="" src="../images/actors/ozge-ustek-gallery/4.jpeg"/>
+</div>
+</section>
+</main>
+<div class="lightbox" id="lightbox">
+<button aria-label="Close image" class="lightbox-close">×</button>
+<img alt="Özge Üstek enlarged gallery image" id="lightboxImg" src=""/>
+</div>
+<script>
+  const images = [
+    "../images/actors/ozge-ustek-gallery/1.jpeg",
+    "../images/actors/ozge-ustek-gallery/2.jpeg",
+    "../images/actors/ozge-ustek-gallery/3.jpeg",
+    "../images/actors/ozge-ustek-gallery/4.jpeg"
+  ];
+
+  let currentIndex = 0;
+  let autoplay;
+  const mainSlide = document.getElementById("mainSlide");
+  const thumbs = document.querySelectorAll("#thumbs img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const dotsContainer = document.getElementById("slideDots");
+
+  images.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.setAttribute("aria-label", "Go to image " + (index + 1));
+    dot.addEventListener("click", () => showSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll("#slideDots button");
+
+  function showSlide(index) {
+    currentIndex = (index + images.length) % images.length;
+    mainSlide.style.opacity = "0";
+    setTimeout(() => {
+      mainSlide.src = images[currentIndex];
+      mainSlide.style.opacity = "1";
+    }, 180);
+
+    thumbs.forEach((thumb, i) => thumb.classList.toggle("active", i === currentIndex));
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === currentIndex));
+  }
+
+  function nextSlide() { showSlide(currentIndex + 1); }
+  function startAutoplay() {
+    clearInterval(autoplay);
+    autoplay = setInterval(nextSlide, 4000);
+  }
+
+  document.querySelector(".next").addEventListener("click", () => { nextSlide(); startAutoplay(); });
+  document.querySelector(".prev").addEventListener("click", () => { showSlide(currentIndex - 1); startAutoplay(); });
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => { showSlide(index); startAutoplay(); });
+  });
+  mainSlide.addEventListener("click", () => {
+    lightboxImg.src = images[currentIndex];
+    lightbox.classList.add("open");
+  });
+  document.querySelector(".lightbox-close").addEventListener("click", () => lightbox.classList.remove("open"));
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.classList.remove("open");
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") { nextSlide(); startAutoplay(); }
+    if (event.key === "ArrowLeft") { showSlide(currentIndex - 1); startAutoplay(); }
+    if (event.key === "Escape") lightbox.classList.remove("open");
+  });
+
+  showSlide(0);
+  startAutoplay();
+</script>
+<script src="../js/script.js"></script></body>
+</html>

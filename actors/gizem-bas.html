@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gizem Baş | BH Talent Management</title>
+<link href="../css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="navbar">
+<nav class="main-nav">
+<a data-en="Home" data-tr="Ana Sayfa" href="../index.html">Ana Sayfa</a>
+<a data-en="Our Actors" data-tr="Oyuncularımız" href="../talent.html">Oyuncularımız</a>
+<a data-en="About" data-tr="Hakkımızda" href="../about.html">Hakkımızda</a>
+<a data-en="Contact" data-tr="İletişim" href="../contact.html">İletişim</a>
+</nav>
+<a class="logo-link" href="../index.html">
+<img alt="BH Talent Management Logo" class="logo" src="../images/logo.png"/>
+</a>
+<div class="language"><button data-lang="tr" onclick="setLanguage('tr')" type="button">TR</button><button data-lang="en" onclick="setLanguage('en')" type="button">EN</button></div>
+</header>
+<main class="lux-profile">
+<section class="editorial-cover actor-cover actor-cover-gizem-bas" style="--cover-image: url('../images/actors/gizem-bas-hero.jpeg');">
+<img alt="Gizem Baş" src="../images/actors/gizem-bas-hero.jpeg"/>
+<div class="editorial-cover-text">
+<a class="back-link" data-en="Our Actors" data-tr="Oyuncularımız" href="../talent.html">Oyuncularımız</a>
+<p class="lux-kicker" data-en="BH Talent Management" data-tr="BH Talent Management">BH Talent Management</p>
+<h1>GIZEM BAŞ</h1>
+<p data-en="Actor" data-tr="Oyuncu">Oyuncu</p>
+</div>
+</section>
+<section class="lux-content editorial-cv">
+<div class="lux-block">
+<h2 data-en="Year of Birth" data-tr="Doğum Tarihi">Doğum Tarihi</h2>
+<div>
+<p>2000</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Training" data-tr="Eğitim">Eğitim</h2>
+<div>
+<p>Yeşim Alıç Atölye — İstanbul Oyunculuk Eğitimi (Eylül 2023)</p>
+<p>SFRPZTF Atölye — İstanbul Güzel Sanatlar Fakültesi (Eylül 2022)</p>
+<p>Kocaeli Üniversitesi Oyunculuk ASD (2021–2025)</p>
+<p>Cemal Hünal Workshop — İstanbul Oyunculuk Eğitimi</p>
+<p>Trabzon Şehir Tiyatrosu (2020)</p>
+<p>Trio Sanat — Trabzon (2020)</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Theatre" data-tr="Tiyatro">Tiyatro</h2>
+<div>
+<p>İnsancıklar — Oyuncu (Şubat 2026–halen)</p>
+<p>Esra Erol’da — ATV, Oyuncu (2025)</p>
+<p>Aperion Yapım / Bir Ressam Bir Katil Bir Boksçu — Asistan Oyuncu</p>
+</div>
+</div>
+</section>
+<section class="gallery-section">
+<div class="gallery-heading">
+<div>
+<p class="lux-kicker" data-en="PORTFOLIO" data-tr="PORTFOLYO">PORTFOLYO</p>
+<h2 data-en="Photo Gallery" data-tr="Fotoğraf Galerisi">Fotoğraf Galerisi</h2>
+</div>
+</div>
+<div class="slideshow">
+<button aria-label="Previous image" class="slide-btn prev">‹</button>
+<div class="slide-frame">
+<img alt="Gizem Baş gallery" id="mainSlide" src="../images/actors/gizem-bas-gallery/1.jpeg"/>
+</div>
+<button aria-label="Next image" class="slide-btn next">›</button>
+</div>
+<div class="slide-dots" id="slideDots"></div>
+<div class="thumbs" id="thumbs"><img alt="Gizem Baş thumbnail 1" class="active" src="../images/actors/gizem-bas-gallery/1.jpeg"/><img alt="Gizem Baş thumbnail 2" src="../images/actors/gizem-bas-gallery/2.jpeg"/><img alt="Gizem Baş thumbnail 3" src="../images/actors/gizem-bas-gallery/3.jpeg"/><img alt="Gizem Baş thumbnail 4" src="../images/actors/gizem-bas-gallery/4.jpeg"/></div>
+</section>
+</main>
+<div class="lightbox" id="lightbox">
+<button aria-label="Close image" class="lightbox-close">×</button>
+<img alt="Gizem Baş enlarged gallery image" id="lightboxImg" src=""/>
+</div>
+<script>
+  const images = [
+    "../images/actors/gizem-bas-gallery/1.jpeg",
+    "../images/actors/gizem-bas-gallery/2.jpeg",
+    "../images/actors/gizem-bas-gallery/3.jpeg",
+    "../images/actors/gizem-bas-gallery/4.jpeg"
+  ];
+
+  let currentIndex = 0;
+  let autoplay;
+  const mainSlide = document.getElementById("mainSlide");
+  const thumbs = document.querySelectorAll("#thumbs img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const dotsContainer = document.getElementById("slideDots");
+
+  images.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.setAttribute("aria-label", "Go to image " + (index + 1));
+    dot.addEventListener("click", () => showSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll("#slideDots button");
+
+  function showSlide(index) {
+    currentIndex = (index + images.length) % images.length;
+    mainSlide.style.opacity = "0";
+    setTimeout(() => {
+      mainSlide.src = images[currentIndex];
+      mainSlide.style.opacity = "1";
+    }, 180);
+
+    thumbs.forEach((thumb, i) => thumb.classList.toggle("active", i === currentIndex));
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === currentIndex));
+  }
+
+  function nextSlide() { showSlide(currentIndex + 1); }
+  function startAutoplay() {
+    clearInterval(autoplay);
+    autoplay = setInterval(nextSlide, 4000);
+  }
+
+  document.querySelector(".next").addEventListener("click", () => { nextSlide(); startAutoplay(); });
+  document.querySelector(".prev").addEventListener("click", () => { showSlide(currentIndex - 1); startAutoplay(); });
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => { showSlide(index); startAutoplay(); });
+  });
+  mainSlide.addEventListener("click", () => {
+    lightboxImg.src = images[currentIndex];
+    lightbox.classList.add("open");
+  });
+  document.querySelector(".lightbox-close").addEventListener("click", () => lightbox.classList.remove("open"));
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.classList.remove("open");
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") { nextSlide(); startAutoplay(); }
+    if (event.key === "ArrowLeft") { showSlide(currentIndex - 1); startAutoplay(); }
+    if (event.key === "Escape") lightbox.classList.remove("open");
+  });
+
+  showSlide(0);
+  startAutoplay();
+</script>
+<script src="../js/script.js"></script></body>
+</html>

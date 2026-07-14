@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tenay Ergün | BH Talent Management</title>
+<link href="../css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="navbar">
+<nav class="main-nav">
+<a data-en="Home" data-tr="Ana Sayfa" href="../index.html">Ana Sayfa</a>
+<a data-en="Our Actors" data-tr="Oyuncularımız" href="../talent.html">Oyuncularımız</a>
+<a data-en="About" data-tr="Hakkımızda" href="../about.html">Hakkımızda</a>
+<a data-en="Contact" data-tr="İletişim" href="../contact.html">İletişim</a>
+</nav>
+<a class="logo-link" href="../index.html">
+<img alt="BH Talent Management Logo" class="logo" src="../images/logo.png"/>
+</a>
+<div class="language"><button data-lang="tr" onclick="setLanguage('tr')" type="button">TR</button><button data-lang="en" onclick="setLanguage('en')" type="button">EN</button></div>
+</header>
+<main class="lux-profile">
+<section class="editorial-cover">
+<img alt="Tenay Ergün" src="../images/actors/tenay-gallery/1.jpg"/>
+<div class="editorial-cover-text">
+<a class="back-link" data-en="Our Actors" data-tr="Oyuncularımız" href="../talent.html">Oyuncularımız</a>
+<p class="lux-kicker" data-en="BH Talent Management" data-tr="BH Talent Management">BH Talent Management</p>
+<h1>TENAY ERGÜN</h1>
+<p data-en="Actor" data-tr="Oyuncu">Oyuncu</p>
+</div>
+</section>
+<section class="lux-content editorial-cv">
+<div class="lux-block intro-block">
+<h2 data-en="Profil" data-tr="Profil">Profil</h2>
+<div>
+<p>2001 doğumlu Tenay Ergün, Kocaeli Üniversitesi Oyunculuk Bölümü mezunudur.</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Training" data-tr="Eğitim">Eğitim</h2>
+<div>
+<p>Kocaeli Üniversitesi Oyunculuk Bölümü Mezunu</p>
+<p>Yeşim Alıç — İmgelem Yoluyla Beden Atölyesi</p>
+<p>Prof. Rick Kemp — Embodied Acting Workshop</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Film" data-tr="Film">Film</h2>
+<div>
+<p>Audition — Aydın Ketenağ</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Dizi" data-tr="Dizi">Dizi</h2>
+<div>
+<p>Pub — Nazmi Atakan Özdoğan</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Theatre" data-tr="Tiyatro">Tiyatro</h2>
+<div>
+<p>Cevriye Müzikali</p>
+<p>Minik Bulut Minnak</p>
+<p>Alice Harikalar Diyarında</p>
+<p>Asiye Nasıl Kurtulur</p>
+<p>Bir Ressam Bir Katil Bir Boksçu</p>
+</div>
+</div>
+<div class="lux-block">
+<h2 data-en="Skills" data-tr="Yetenekler">Yetenekler</h2>
+<div class="lux-skills">
+<span>Fitness</span>
+<span>Dans</span>
+<span>Şan</span>
+<span>Voleybol</span>
+<span>Cimnastik</span>
+<span>Araç Kullanma</span>
+<span>Yüzme</span>
+</div>
+</div>
+</section>
+<section class="gallery-section">
+<div class="gallery-heading">
+<div>
+<p class="lux-kicker" data-en="PORTFOLIO" data-tr="PORTFOLYO">PORTFOLYO</p>
+<h2 data-en="Photo Gallery" data-tr="Fotoğraf Galerisi">Fotoğraf Galerisi</h2>
+</div>
+</div>
+<div class="slideshow">
+<button aria-label="Previous image" class="slide-btn prev">‹</button>
+<div class="slide-frame">
+<img alt="Tenay Ergün gallery" id="mainSlide" src="../images/actors/tenay-gallery/1.jpg"/>
+</div>
+<button aria-label="Next image" class="slide-btn next">›</button>
+</div>
+<div class="slide-dots" id="slideDots"></div>
+<div class="thumbs" id="thumbs">
+<img alt="Tenay Ergün thumbnail 1" class="active" src="../images/actors/tenay-gallery/1.jpg"/>
+<img alt="Tenay Ergün thumbnail 2" src="../images/actors/tenay-gallery/2.jpg"/>
+<img alt="Tenay Ergün thumbnail 3" src="../images/actors/tenay-gallery/3.jpg"/>
+<img alt="Tenay Ergün thumbnail 4" src="../images/actors/tenay-gallery/4.jpg"/>
+<img alt="Tenay Ergün thumbnail 5" src="../images/actors/tenay-gallery/5.jpg"/>
+<img alt="Tenay Ergün thumbnail 6" src="../images/actors/tenay-gallery/6.jpg"/>
+<img alt="Tenay Ergün thumbnail 7" src="../images/actors/tenay-gallery/7.jpg"/>
+<img alt="Tenay Ergün thumbnail 8" src="../images/actors/tenay-gallery/8.jpg"/>
+<img alt="Tenay Ergün thumbnail 9" src="../images/actors/tenay-gallery/9.jpg"/>
+<img alt="Tenay Ergün thumbnail 10" src="../images/actors/tenay-gallery/10.jpg"/>
+</div>
+</section>
+</main>
+<div class="lightbox" id="lightbox">
+<button aria-label="Close image" class="lightbox-close">×</button>
+<img alt="Tenay Ergün enlarged gallery image" id="lightboxImg" src=""/>
+</div>
+<script>
+  const images = [
+    "../images/actors/tenay-gallery/1.jpg",
+    "../images/actors/tenay-gallery/2.jpg",
+    "../images/actors/tenay-gallery/3.jpg",
+    "../images/actors/tenay-gallery/4.jpg",
+    "../images/actors/tenay-gallery/5.jpg",
+    "../images/actors/tenay-gallery/6.jpg",
+    "../images/actors/tenay-gallery/7.jpg",
+    "../images/actors/tenay-gallery/8.jpg",
+    "../images/actors/tenay-gallery/9.jpg",
+    "../images/actors/tenay-gallery/10.jpg"
+  ];
+
+  let currentIndex = 0;
+  let autoplay;
+  const mainSlide = document.getElementById("mainSlide");
+  const thumbs = document.querySelectorAll("#thumbs img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const dotsContainer = document.getElementById("slideDots");
+
+  images.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.setAttribute("aria-label", "Go to image " + (index + 1));
+    dot.addEventListener("click", () => showSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll("#slideDots button");
+
+  function showSlide(index) {
+    currentIndex = (index + images.length) % images.length;
+    mainSlide.style.opacity = "0";
+    setTimeout(() => {
+      mainSlide.src = images[currentIndex];
+      mainSlide.style.opacity = "1";
+    }, 180);
+
+    thumbs.forEach((thumb, i) => thumb.classList.toggle("active", i === currentIndex));
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === currentIndex));
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function startAutoplay() {
+    clearInterval(autoplay);
+    autoplay = setInterval(nextSlide, 4000);
+  }
+
+  document.querySelector(".next").addEventListener("click", () => {
+    nextSlide();
+    startAutoplay();
+  });
+
+  document.querySelector(".prev").addEventListener("click", () => {
+    showSlide(currentIndex - 1);
+    startAutoplay();
+  });
+
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => {
+      showSlide(index);
+      startAutoplay();
+    });
+  });
+
+  mainSlide.addEventListener("click", () => {
+    lightboxImg.src = images[currentIndex];
+    lightbox.classList.add("open");
+  });
+
+  document.querySelector(".lightbox-close").addEventListener("click", () => {
+    lightbox.classList.remove("open");
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.classList.remove("open");
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") {
+      nextSlide();
+      startAutoplay();
+    }
+    if (event.key === "ArrowLeft") {
+      showSlide(currentIndex - 1);
+      startAutoplay();
+    }
+    if (event.key === "Escape") lightbox.classList.remove("open");
+  });
+
+  let startX = 0;
+  mainSlide.addEventListener("touchstart", (event) => {
+    startX = event.touches[0].clientX;
+  });
+
+  mainSlide.addEventListener("touchend", (event) => {
+    const endX = event.changedTouches[0].clientX;
+    if (startX - endX > 50) nextSlide();
+    if (endX - startX > 50) showSlide(currentIndex - 1);
+    startAutoplay();
+  });
+
+  showSlide(0);
+  startAutoplay();
+</script>
+<script src="../js/script.js"></script></body>
+</html>
