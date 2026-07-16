@@ -89,6 +89,17 @@
 <img alt="Ayça Dilsiz thumbnail 4" class="" src="../images/actors/ayca-dilsiz-gallery/4.png"/>
 </div>
 </section>
+<div class="actor-social">
+  <a
+    href="https://instagram.com/aycadilsiz"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Ayça Dilsiz Instagram"
+  >
+    <img src="../images/icons/instagram.png"alt="Instagram"
+    />
+  </a>
+</div>
 </main>
 <div class="lightbox" id="lightbox">
 <button aria-label="Close image" class="lightbox-close">×</button>
@@ -142,10 +153,10 @@
   thumbs.forEach((thumb, index) => {
     thumb.addEventListener("click", () => { showSlide(index); startAutoplay(); });
   });
-  mainSlide.addEventListener("click", () => {
-    lightboxImg.src = images[currentIndex];
-    lightbox.classList.add("open");
-  });
+mainSlide.addEventListener("click", () => {
+  lightboxImg.src = images[currentIndex];
+  lightbox.classList.add("open");
+});
   document.querySelector(".lightbox-close").addEventListener("click", () => lightbox.classList.remove("open"));
   lightbox.addEventListener("click", (event) => {
     if (event.target === lightbox) lightbox.classList.remove("open");

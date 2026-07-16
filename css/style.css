@@ -1158,3 +1158,26 @@ img { display: block; }
     letter-spacing: -2px !important;
   }
 }
+.actor-social {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 70px;
+}
+
+.actor-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.actor-social a:hover {
+  transform: scale(1.12);
+  opacity: 0.75;
+}
+
+.actor-social img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
